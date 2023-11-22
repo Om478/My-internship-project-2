@@ -1,0 +1,51 @@
+import time
+
+def print_delay(message, delay=1):
+    print(message)
+    time.sleep(delay)
+
+### Print a welcome message
+print_delay("WELCOME")
+print_delay("you are entering a Haunted Mansion!")
+print_delay("You are a distant family member of a rich millionaire")
+print_delay("He has just passed away, leaving this mansion to you.")
+print_delay("As the newfound owner, you decide to pay a visit to the mansion.")
+print_delay("The house is dated, creaky, and falling apart. You walk in the front door.")
+print_delay("Do you want to enter the living room or the dining room?")
+
+### Prompt user for a choice
+roomChoice = input("> ")
+
+if roomChoice.lower() == "living room":
+    print_delay("You enter the living room.")
+    print_delay("As you walk in, you see a sleeping three headed dragon guarding some old Door.")
+    print_delay("Do you want to open the old door and see what's on the other side?")
+
+    pitBullChoice = input("> ")
+
+    if pitBullChoice.lower() == "yes":
+        print_delay("You attempt to open the door, but it wakes up and rips you to shreds.")
+        print_delay("You are now dead.")
+    elif pitBullChoice.lower() == "no":
+        print_delay("You decide not to open the door")
+        print_delay("You turn around and leave the house safely.")
+    else:
+        print_delay("Invalid choice. Please enter yes or no.")
+elif roomChoice.lower() == "dining room":
+    print_delay("You chose to go into the dining room.")
+    print_delay("As you walk in, you see a Dark box in the center of Floor.")
+    print_delay("Do you want to open the Dark box?")
+
+    vaseChoice = input("> ")
+
+    if vaseChoice.lower() == "yes":
+        print_delay("You open the Dark box and find a pile of bones!")
+    elif vaseChoice.lower() == "no":
+        print_delay("You decide not to open the Dark box.")
+        print_delay("As you turn to leave, you hear a cracking sound coming from the corner.")
+        print_delay("A dark figure with glowing red eyes launches at you, knocking you unconscious.")
+        print_delay("You wake up in your bed. It was all a dream.")
+    else:
+        print_delay("Invalid choice. Please enter yes or no.")
+else:
+    print_delay("Invalid choice. Please enter living room or dining room.")
